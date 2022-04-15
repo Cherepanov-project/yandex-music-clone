@@ -18,3 +18,7 @@ This is a Web Music Service.
 ## Links
 
 [Макет](https://www.behance.net/gallery/118276775/Mytones-Music-Streaming-Web-App)
+
+## API
+
+так как spotify не доступен в РФ на текущий момент давайте юзать https://developer.napster.com/
