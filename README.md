@@ -18,3 +18,7 @@ This is a Web Music Service.
 ## Links
 
 [Макет](https://www.behance.net/gallery/118276775/Mytones-Music-Streaming-Web-App)
+
+## API
+
+[SoundCloud](https://developers.soundcloud.com/docs/api/explorer/open-api)
