@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Jost'; 
+	src: url(/fonts/Jost.ttf);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
