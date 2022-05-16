@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import * as variables from '../../../utils/variables';
-import { Label } from '../formCheckbox/checkboxStyles';
+import * as variables from "../../../utils/variables";
+import { Label } from "../formCheckbox/checkboxStyles";
 
 export const LabelRadio = styled(Label)`
   max-width: 215px;
-  margin-top: 20px
+  margin-top: 20px;
 `;
 
-export const HiddenRadio = styled.input.attrs({ type: 'radio' })`
+export const HiddenRadio = styled.input.attrs({ type: "radio" })`
   border: 0;
   clip: rect(0 0 0 0);
   clippath: inset(50%);
@@ -28,7 +28,7 @@ export const StyledRadio = styled.div`
   background-color: white;
   border: 4px solid white;
   margin-right: 10px;
-  
+
   ${HiddenRadio}:checked + & {
     border: 4px solid ${variables.PRIMARY_COLOR};
   }

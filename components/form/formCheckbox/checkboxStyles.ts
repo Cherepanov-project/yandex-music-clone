@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import * as variables from '../../../utils/variables';
+import styled from "styled-components";
+import * as variables from "../../../utils/variables";
 
 export const Label = styled.label`
   display: flex;
@@ -12,13 +12,13 @@ export const Label = styled.label`
   letter-spacing: 0.02em;
   margin: 15px 0 0;
   cursor: pointer;
-  
+
   &::selection {
     background-color: ${variables.PRIMARY_COLOR};
   }
 `;
 
-export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
+export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   border: 0;
   clip: rect(0 0 0 0);
   clippath: inset(50%);
@@ -38,11 +38,11 @@ export const StyledCheckbox = styled.div`
   border-radius: 3px;
   background-color: white;
   margin-right: 5px;
-  
+
   ${HiddenCheckbox}:checked + & {
     background-color: ${variables.PRIMARY_COLOR};
   }
-  
+
   ${HiddenCheckbox}:focus + & {
     box-shadow: 0 0 0 2px #ffb6c1;
   }
