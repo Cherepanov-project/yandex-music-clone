@@ -34,6 +34,6 @@ export const StyledRadio = styled.div`
   }
 
   ${HiddenRadio}:focus + & {
-    box-shadow: 0 0 0 2px #ffb6c1;
+    box-shadow: 0 0 0 2px ${variables.ERROR_COLOR};
   }
 `;
