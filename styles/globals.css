@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #161616;
 }
 
 a {
@@ -17,4 +18,8 @@ a {
 
 input {
   outline: none;
+}
+
+img {
+  width: 100%;
 }
