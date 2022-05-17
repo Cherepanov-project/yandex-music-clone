@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 
-import {Slider} from "./slider/slider";
+import {Slider} from "./slider";
 
 const Home: NextPage = () => {
   return (
