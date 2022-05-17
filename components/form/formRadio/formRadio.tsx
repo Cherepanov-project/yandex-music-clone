@@ -1,10 +1,16 @@
 import React from "react";
 import { useField } from "formik";
 
-import { IFormRadio } from "../../../model/loginOrRegister/interfaces";
 import { HiddenRadio, LabelRadio, StyledRadio } from "./radioStyles";
 
-export const FormRadio = ({ label, ...props }: IFormRadio) => {
+interface RadioInterface {
+  name: string;
+  value: string;
+  checked?: boolean;
+  label?: string;
+}
+
+export const FormRadio = ({ label, ...props }: RadioInterface) => {
   const [field] = useField(props);
   return (
     <>

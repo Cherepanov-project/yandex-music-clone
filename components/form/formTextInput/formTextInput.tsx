@@ -1,10 +1,17 @@
 import React from "react";
 import { useField } from "formik";
-import { IFormInput } from "../../../model/loginOrRegister/interfaces";
 
 import { Input, ErrorMsg, Label } from "./textInputStyles";
 
-export const FormTextInput = ({ label, ...props }: IFormInput) => {
+interface InputInterface {
+  placeholder: string;
+  name: string;
+  label?: string;
+  type?: string;
+  autoComplete?: string;
+}
+
+export const FormTextInput = ({ label, ...props }: InputInterface) => {
   const [field, meta] = useField(props);
 
   return (

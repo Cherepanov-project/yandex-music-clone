@@ -8,6 +8,55 @@ import { validationRegister } from "../../utils/validationSchemas";
 import { List, Item, Container } from "./registerStyles";
 
 const SignUp: React.FC = () => {
+  const arrFields = [
+    {
+      placeholder: "Username",
+      name: "username",
+      type: "text",
+      label: "Username *",
+    },
+    {
+      placeholder: "Email",
+      name: "email",
+      type: "text",
+      label: "Email *",
+    },
+    {
+      placeholder: "First name",
+      name: "firstName",
+      type: "text",
+      label: "First Name",
+    },
+    {
+      placeholder: "Last name",
+      name: "lastName",
+      type: "text",
+      label: "Last Name",
+    },
+    {
+      placeholder: "Password",
+      name: "password",
+      type: "password",
+      label: "Password *",
+      autoComplete: "on",
+    },
+    {
+      placeholder: "Repeat password",
+      name: "passwordConfirm",
+      type: "password",
+      label: "Repeat Password *",
+      autoComplete: "on",
+    },
+  ];
+
+  const listFields = arrFields.map((props) => {
+    return (
+      <Item key={props.name}>
+        <FormTextInput {...props} />
+      </Item>
+    );
+  });
+
   return (
     <Formik
       validationSchema={validationRegister}
@@ -20,68 +69,14 @@ const SignUp: React.FC = () => {
         passwordConfirm: "",
         tariff: "premium",
       }}
-      onSubmit={(data, actions) => {
-        console.log("Submitted =)");
-        console.log("data: ", data);
-      }}
+      onSubmit={() => {}}
     >
       {({ values }) => (
         <Center>
           <Container>
             <Title>Register</Title>
             <Form>
-              <List>
-                <Item>
-                  <FormTextInput
-                    placeholder="Username"
-                    name="username"
-                    type="text"
-                    label="Username *"
-                  />
-                </Item>
-                <Item>
-                  <FormTextInput
-                    placeholder="Email"
-                    name="email"
-                    type="text"
-                    label="Email *"
-                  />
-                </Item>
-                <Item>
-                  <FormTextInput
-                    placeholder="First name"
-                    name="firstName"
-                    type="text"
-                    label="First Name"
-                  />
-                </Item>
-                <Item>
-                  <FormTextInput
-                    placeholder="Last name"
-                    name="lastName"
-                    type="text"
-                    label="Last Name"
-                  />
-                </Item>
-                <Item>
-                  <FormTextInput
-                    placeholder="Password"
-                    autoComplete="on"
-                    name="password"
-                    type="password"
-                    label="Password *"
-                  />
-                </Item>
-                <Item>
-                  <FormTextInput
-                    placeholder="Repeat password"
-                    name="passwordConfirm"
-                    type="password"
-                    label="Repeat Password *"
-                    autoComplete="on"
-                  />
-                </Item>
-              </List>
+              <List>{listFields}</List>
               <FormRadio
                 name="tariff"
                 label="Premium - 199$ / 1 Month"

@@ -1,11 +1,15 @@
 import React from "react";
 import { useField } from "formik";
-import { IFormCheckbox } from "../../../model/loginOrRegister/interfaces";
 
 import { Label, HiddenCheckbox, StyledCheckbox, Icon } from "./checkboxStyles";
 import { ErrorMsg } from "../formTextInput/textInputStyles";
 
-export const FormCheckbox = ({ label, ...props }: IFormCheckbox) => {
+interface CheckboxInterface {
+  name: string;
+  label?: string;
+}
+
+export const FormCheckbox = ({ label, ...props }: CheckboxInterface) => {
   const [field, meta] = useField(props);
 
   return (

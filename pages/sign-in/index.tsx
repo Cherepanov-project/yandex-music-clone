@@ -24,11 +24,7 @@ const SignIn: React.FC = () => {
         password: "",
         isRemembered: false,
       }}
-      onSubmit={(data, actions) => {
-        console.log("Submitted =)");
-        console.log("data: ", data);
-        // console.log('actions: ', actions);
-      }}
+      onSubmit={() => {}}
     >
       {() => (
         <Center>
