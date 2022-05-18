@@ -1,12 +1,11 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <h1>Yandex-Music Clone</h1>
-    </div>
-  )
-}
+    <>
+      <div>streamlab</div>
+    </>
+  );
+};
 
-export default Home
+export default Home;
