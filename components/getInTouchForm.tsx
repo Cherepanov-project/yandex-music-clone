@@ -25,23 +25,18 @@ const GetInTouchForm = () => {
           text: "",
         }}
         validateOnBlur
-        onSubmit={(values, { resetForm }) => {
-          emailjs
-            .send(
+        onSubmit={async (values, { resetForm }) => {
+          try {
+            await emailjs.send(
               "service_lki8rzt",
               "template_t8yp2s8",
               values,
               "fRelFQIL89Ww4jArC"
-            )
-            .then(
-              (result) => {
-                console.log(result.text);
-              },
-              (error) => {
-                console.log(error.text);
-              }
             );
-          resetForm();
+            resetForm();
+          } catch (error) {
+            console.log(error);
+          }
         }}
       >
         {({
