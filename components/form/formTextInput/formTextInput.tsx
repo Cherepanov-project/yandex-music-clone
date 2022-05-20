@@ -2,16 +2,9 @@ import React from "react";
 import { useField } from "formik";
 
 import { Input, ErrorMsg, Label } from "./textInputStyles";
+import { TextInputInterface } from "./inputInterface";
 
-interface InputInterface {
-  placeholder: string;
-  name: string;
-  label?: string;
-  type?: string;
-  autoComplete?: string;
-}
-
-export const FormTextInput = ({ label, ...props }: InputInterface) => {
+export const FormTextInput = ({ label, ...props }: TextInputInterface) => {
   const [field, meta] = useField(props);
 
   return (

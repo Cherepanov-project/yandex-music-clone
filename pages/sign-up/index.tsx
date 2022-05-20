@@ -6,48 +6,9 @@ import { FormRadio } from "../../components/form/formRadio/formRadio";
 import { Title, Center, Button } from "../sign-in/loginStyles";
 import { validationRegister } from "../../utils/validationSchemas";
 import { List, Item, Container } from "./registerStyles";
+import { arrFields } from "./inputFields";
 
 const SignUp: React.FC = () => {
-  const arrFields = [
-    {
-      placeholder: "Username",
-      name: "username",
-      type: "text",
-      label: "Username *",
-    },
-    {
-      placeholder: "Email",
-      name: "email",
-      type: "text",
-      label: "Email *",
-    },
-    {
-      placeholder: "First name",
-      name: "firstName",
-      type: "text",
-      label: "First Name",
-    },
-    {
-      placeholder: "Last name",
-      name: "lastName",
-      type: "text",
-      label: "Last Name",
-    },
-    {
-      placeholder: "Password",
-      name: "password",
-      type: "password",
-      label: "Password *",
-      autoComplete: "on",
-    },
-    {
-      placeholder: "Repeat password",
-      name: "passwordConfirm",
-      type: "password",
-      label: "Repeat Password *",
-      autoComplete: "on",
-    },
-  ];
 
   const listFields = arrFields.map((props) => {
     return (
