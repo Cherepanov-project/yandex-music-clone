@@ -1,5 +1,5 @@
 import Contacts from "../components/contacts";
-import GetInTouchForm from "../components/getInTouchForm";
+import GetInTouchForm from "../components/getInTouchForm/getInTouchForm";
 import {
   SectionContacts,
   ContactsContainer,

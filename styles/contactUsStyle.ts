@@ -169,6 +169,9 @@ export const BtnForm = styled.button`
   height: 56px;
   font-size: 16px;
   margin-top: 24px;
+  :disabled {
+    opacity:0.5;
+  }
 `;
 export const Err = styled.div`
   color: #e50916;
