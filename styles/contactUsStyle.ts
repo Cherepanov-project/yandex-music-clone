@@ -18,6 +18,7 @@ export const Row = styled.div`
   display: flex;
   @media (max-width: 1140px) {
     flex-wrap: wrap;
+   
   }
 `;
 export const ContactsColumn = styled.div` 
@@ -29,29 +30,18 @@ export const ContactsColumn = styled.div`
 
       flex: 0 0 50%;
       max-width: 50%;
+      margin-bottom: 24px;
+      &:last-child { 
+        flex: 0 0 100%;
+        max-width: 100%; 
+      }
+      
      }
      @media (max-width: 768px) {
-      margin-bottom:24px;
       flex: 0 0 100%;
       max-width: 100%;
      }
    
-  }
-    `;
-export const ContactColumn = styled.div` 
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    padding-right: 15px;
-    padding-left: 15px;
-    @media (max-width: 1140px) {
-
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-top: 24px;
-     }
-     @media (max-width: 768px) {
-      margin-top:0px;
-     }
   }
     `;
 
