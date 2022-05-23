@@ -3,77 +3,56 @@ import { FacebookShareButton } from "next-share";
 import { VKShareButton } from "next-share";
 import { TwitterShareButton } from "next-share";
 import { TelegramShareButton } from "next-share";
-import fb from "../../img/fb.svg";
-import telegram from "../../img/telegram.svg";
-import twitter from "../../img/twitter.svg";
-import vkontakte from "../../img/vkontakte.svg";
 
 import { SocialLink, SocialLi } from "./footerStyle";
+const socialLinks = [
+  {
+    id: 1,
+    TagLink: FacebookShareButton,
+    alt: "fbook",
+    src: "/fb.svg",
+    title: "share in facebook",
+  },
+  {
+    id: 2,
+    TagLink: VKShareButton,
+    alt: "vk",
+    src: "/vkontakte.svg",
+    title: "share in vkontakte",
+  },
+  {
+    id: 3,
+    TagLink: TelegramShareButton,
+    alt: "telegram",
+    src: "/telegram.svg",
+    title: "share in telegram",
+  },
+  {
+    id: 4,
+    TagLink: TwitterShareButton,
+    alt: "twitter",
+    src: "/twitter.svg",
+    title: "share in twitter",
+  },
+];
 
 const SocialList = () => {
   return (
-    <SocialLink>
-      <SocialLi>
-        <FacebookShareButton
-          url={
-            "http://template.gentechtreedesign.com/html/streamlab/red-html/index.html"
-          }
-        >
-          <Image
-            src={fb}
-            alt="fbook"
-            width={25}
-            height={25}
-            title="share in facebook"
-          />
-        </FacebookShareButton>
-      </SocialLi>
-      <SocialLi>
-        <VKShareButton
-          url={
-            "http://template.gentechtreedesign.com/html/streamlab/red-html/index.html"
-          }
-        >
-          <Image
-            src={vkontakte}
-            alt="vk"
-            width={25}
-            height={25}
-            title="share in vkontakte"
-          />
-        </VKShareButton>
-      </SocialLi>
-      <SocialLi>
-        <TelegramShareButton
-          url={
-            "http://template.gentechtreedesign.com/html/streamlab/red-html/index.html"
-          }
-        >
-          <Image
-            src={telegram}
-            alt="telegram"
-            width={25}
-            height={25}
-            title="share in telegram"
-          />
-        </TelegramShareButton>
-      </SocialLi>
-      <SocialLi>
-        <TwitterShareButton
-          url={
-            "http://template.gentechtreedesign.com/html/streamlab/red-html/index.html"
-          }
-        >
-          <Image
-            src={twitter}
-            alt="twitter"
-            width={25}
-            height={25}
-            title="share in twitter"
-          />
-        </TwitterShareButton>
-      </SocialLi>
-    </SocialLink>
+    <>
+      <SocialLink>
+        {socialLinks.map(({ id, TagLink, alt, src, title }) => (
+          <SocialLi key={id}>
+            <TagLink
+              url={
+                "http://template.gentechtreedesign.com/html/streamlab/red-html/index.html"
+              }
+            >
+              <Image src={src} alt={alt} width={25} height={25} title={title} />
+            </TagLink>
+          </SocialLi>
+        ))}
+      </SocialLink>
+    </>
   );
 };
 export default SocialList;
