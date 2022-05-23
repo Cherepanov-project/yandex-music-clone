@@ -1,3 +1,6 @@
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../hook";
+import { showError } from "../../store/formErrorSlice";
 import { Formik } from "formik";
 import emailjs, { send } from "@emailjs/browser";
 import FormInput from "./formInput";
@@ -10,7 +13,7 @@ import {
   Err,
 } from "../../styles/contactUsStyle";
 import { validationForm } from "../../utils/validationForm";
-
+import FormError from "./formError";
 const inputs = [
   { placeholder: "Your Name", name: "name", type: "text", value: "" },
   { placeholder: "Email", name: "email", type: "text", value: "" },
@@ -18,6 +21,10 @@ const inputs = [
   { placeholder: "Venue", name: "venue", type: "text", value: "" },
 ];
 const GetInTouchForm = () => {
+  const dispatch = useDispatch();
+  const errorSubmitForm = useAppSelector(
+    (state) => state.showErr.errorSubmitForm
+  );
   return (
     <>
       <Formik
@@ -42,7 +49,7 @@ const GetInTouchForm = () => {
             resetForm();
             setSubmitting(false);
           } catch (error) {
-            console.log(error);
+            dispatch(showError(true));
           }
         }}
       >
@@ -76,6 +83,7 @@ const GetInTouchForm = () => {
                   <BtnForm type="submit" disabled={!isValid || isSubmitting}>
                     SEND
                   </BtnForm>
+                  {errorSubmitForm && <FormError />}
                 </TxtArea>
               </FormRow>
             </form>

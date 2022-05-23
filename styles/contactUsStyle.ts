@@ -168,3 +168,7 @@ export const Err = styled.div`
   margin-top: 5px;
   font-size: 14px;
 `;
+export const FormErr = styled.div`
+padding:5px;
+color:#e50916;
+`
