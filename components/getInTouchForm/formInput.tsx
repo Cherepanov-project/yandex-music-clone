@@ -1,6 +1,6 @@
-import React from "react";
-import { useField } from "formik";
-import { InputColumn, Inp, Err } from "../../styles/contactUsStyle";
+import React from 'react';
+import { useField } from 'formik';
+import { InputColumn, Inp, Err } from '../../styles/contactUsStyle';
 
 interface InputFormInterface {
   placeholder: string;

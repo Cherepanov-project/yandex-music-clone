@@ -1,12 +1,6 @@
-import Contacts from "../components/contacts";
-import GetInTouchForm from "../components/getInTouchForm/getInTouchForm";
-import {
-  SectionContacts,
-  ContactsContainer,
-  Row,
-  MapColumn,
-  Map,
-} from "../styles/contactUsStyle";
+import Contacts from '../components/contacts';
+import GetInTouchForm from '../components/getInTouchForm/getInTouchForm';
+import { SectionContacts, ContactsContainer, Row, MapColumn, Map } from '../styles/contactUsStyle';
 const ContactUs = () => {
   return (
     <>

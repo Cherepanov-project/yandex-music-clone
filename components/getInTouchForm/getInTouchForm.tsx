@@ -1,51 +1,37 @@
-import { useDispatch } from "react-redux";
-import { useAppSelector } from "../../hook";
-import { showError } from "../../store/formErrorSlice";
-import { Formik } from "formik";
-import emailjs, { send } from "@emailjs/browser";
-import FormInput from "./formInput";
-import {
-  TitleForm,
-  FormRow,
-  TxtArea,
-  TextAr,
-  BtnForm,
-  Err,
-} from "../../styles/contactUsStyle";
-import { validationForm } from "../../utils/validationForm";
-import FormError from "./formError";
+import { useDispatch } from 'react-redux';
+import { useAppSelector } from '../../hook';
+import { showError } from '../../store/formErrorSlice';
+import { Formik } from 'formik';
+import emailjs from '@emailjs/browser';
+import FormInput from './formInput';
+import { TitleForm, FormRow, TxtArea, TextAr, BtnForm, Err } from '../../styles/contactUsStyle';
+import { validationForm } from '../../utils/validationForm';
+import FormError from './formError';
 const inputs = [
-  { placeholder: "Your Name", name: "name", type: "text", value: "" },
-  { placeholder: "Email", name: "email", type: "text", value: "" },
-  { placeholder: "Cell Phone Name", name: "tel", type: "tel", value: "" },
-  { placeholder: "Venue", name: "venue", type: "text", value: "" },
+  { placeholder: 'Your Name', name: 'name', type: 'text', value: '' },
+  { placeholder: 'Email', name: 'email', type: 'text', value: '' },
+  { placeholder: 'Cell Phone Name', name: 'tel', type: 'tel', value: '' },
+  { placeholder: 'Venue', name: 'venue', type: 'text', value: '' },
 ];
 const GetInTouchForm = () => {
   const dispatch = useDispatch();
-  const errorSubmitForm = useAppSelector(
-    (state) => state.showErr.errorSubmitForm
-  );
+  const errorSubmitForm = useAppSelector((state) => state.showErr.errorSubmitForm);
   return (
     <>
       <Formik
         validationSchema={validationForm}
         initialValues={{
-          name: "",
-          email: "",
-          tel: "",
-          venue: "",
-          text: "",
+          name: '',
+          email: '',
+          tel: '',
+          venue: '',
+          text: '',
         }}
         validateOnBlur
         onSubmit={async (values, { resetForm, setSubmitting }) => {
           try {
             setSubmitting(true);
-            await emailjs.send(
-              "service_lki8rzt",
-              "template_t8yp2s8",
-              values,
-              "fRelFQIL89Ww4jArC"
-            );
+            await emailjs.send('service_lki8rzt', 'template_t8yp2s8', values, 'fRelFQIL89Ww4jArC');
             resetForm();
             setSubmitting(false);
           } catch (error) {
@@ -53,16 +39,7 @@ const GetInTouchForm = () => {
           }
         }}
       >
-        {({
-          values,
-          errors,
-          touched,
-          handleChange,
-          handleBlur,
-          isValid,
-          handleSubmit,
-          isSubmitting,
-        }) => (
+        {({ values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, isSubmitting }) => (
           <>
             <TitleForm>Get in Touch</TitleForm>
             <form onSubmit={handleSubmit}>
