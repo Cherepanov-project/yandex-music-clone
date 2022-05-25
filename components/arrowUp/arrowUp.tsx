@@ -15,7 +15,7 @@ const ArrowUp = () => {
         dispatch(showButton(false));
       }
     });
-  }, [dispatch, isVisibleBtn]);
+  }, [dispatch,isVisibleBtn]);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

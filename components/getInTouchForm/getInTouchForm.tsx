@@ -7,12 +7,7 @@ import FormInput from './formInput';
 import { TitleForm, FormRow, TxtArea, TextAr, BtnForm, Err } from '../../styles/contactUsStyle';
 import { validationForm } from '../../utils/validationForm';
 import FormError from './formError';
-const inputs = [
-  { placeholder: 'Your Name', name: 'name', type: 'text', value: '' },
-  { placeholder: 'Email', name: 'email', type: 'text', value: '' },
-  { placeholder: 'Cell Phone Name', name: 'tel', type: 'tel', value: '' },
-  { placeholder: 'Venue', name: 'venue', type: 'text', value: '' },
-];
+import { inputs } from '../../model/contactUs/inputs';
 const GetInTouchForm = () => {
   const dispatch = useDispatch();
   const errorSubmitForm = useAppSelector((state) => state.showErr.errorSubmitForm);

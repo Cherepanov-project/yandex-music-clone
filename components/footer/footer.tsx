@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import SocialList from './socialList';
-import NavigationFooterLeft from './navigationFooterLeft';
-import NavigationFooterRight from './navigationFooterRight';
+import NavigationFooter from './navigationFooter';
 import DownloadLinks from './downLoadLink';
 import FooterDescription from './footerDescription';
-
+import { navFooterLeft, navFooterRight } from '../../model/footer/navFooter';
 import { FooterContainer, FooterTop, FooterColumn, FooterTitle, Copy, DownloadLink } from './footerStyle';
 
 const Footer = () => {
@@ -20,10 +19,10 @@ const Footer = () => {
             </div>
           </FooterColumn>
           <FooterColumn>
-            <NavigationFooterLeft />
+            <NavigationFooter text="Explore" navArr={navFooterLeft} />
           </FooterColumn>
           <FooterColumn>
-            <NavigationFooterRight />
+            <NavigationFooter text="Copmany" navArr={navFooterRight} />
           </FooterColumn>
           <FooterColumn>
             <FooterTitle>Downlaod App</FooterTitle>
