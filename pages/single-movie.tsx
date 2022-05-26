@@ -98,7 +98,7 @@ const SingleMovie = () => {
           <MoreTitle>More Like This</MoreTitle>
           <MoreContainer><ListItems movieCount={movieCount}/></MoreContainer>
           <MoreButtonLoad onClick={loadMore}>
-            {loading ? <Loader/> : null}
+            {loading ? <Loader type={'type'} color={'color'} /> : null}
             <MoreButtonLoadText>load more</MoreButtonLoadText>
           </MoreButtonLoad>
         </More>
