@@ -10,7 +10,7 @@ import {
   MoreTitle,
   MoreDuration,
   MoreGenre,
-  MoreButtons, MoreButtonsMenu, MoreLikeContent, MoreButtonsLike, MoreButtonsAdd
+  MoreButtons, MoreButtonsMenu, MoreLikeContent, MoreButtonsLike, MoreButtonsAdd, AlertMessage
 } from './ListItemsStyle'
 
 interface MovieCountInterface {
@@ -19,8 +19,9 @@ interface MovieCountInterface {
 
 export const ListItems = ({movieCount}: MovieCountInterface) => {
   const slice = movieData.slice(0, movieCount)
+  const messages = <AlertMessage>Something happened, please reload the page </AlertMessage>
 
-  return slice.map((item) =>
+  const items = slice.length !== 0 ? (slice.map((item) =>
       <MoreItem key={item.movie.id}>
         <div>
           <MoreItemImg src={item.movie.image} alt={item.movie.title}/>
@@ -44,5 +45,11 @@ export const ListItems = ({movieCount}: MovieCountInterface) => {
           <MoreGenre href='#'>Action</MoreGenre>
         </MoreDescription>
       </MoreItem>
-  );
+  )) : messages
+
+
+  return <>
+
+    {items}
+  </>
 }

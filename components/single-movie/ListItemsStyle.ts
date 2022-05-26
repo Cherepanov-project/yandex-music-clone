@@ -179,3 +179,12 @@ export const MoreButtonsAdd = styled.button`
   cursor: pointer;
   position: relative;
 `
+
+export const AlertMessage = styled.span`
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  border: 2px solid #e50916;
+  text-align: center;
+  padding: 16px;
+    `
