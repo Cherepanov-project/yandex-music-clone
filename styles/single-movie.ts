@@ -155,4 +155,10 @@ export const MoreButtonLoad = styled.button`
   border-radius: 0;
   cursor: pointer;
   margin-top: 32px;
+  display: flex;
+  gap: 16px;
+`
+
+export const MoreButtonLoadText = styled.span`
+transform: translateY(4px);
 `

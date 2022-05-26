@@ -16,11 +16,13 @@ import {
   MovieGenre,
   MovieSocial,
   MovieSocialItem,
-  More, MoreTitle, MoreContainer, MoreButtonLoad
+  More, MoreTitle, MoreContainer, MoreButtonLoad, MoreButtonLoadText
 } from '../styles/single-movie'
+import {Loader} from '../components/loader/Loader'
 
 const SingleMovie = () => {
   const [movieCount, setMovieCount] = useState(4);
+  const [loading, setLoading] = useState(true)
   const loadMore = () => setMovieCount(movieCount + 4)
 
   return (
@@ -92,9 +94,13 @@ const SingleMovie = () => {
         </Movie>
 
         <More>
+
           <MoreTitle>More Like This</MoreTitle>
           <MoreContainer><ListItems movieCount={movieCount}/></MoreContainer>
-          <MoreButtonLoad onClick={loadMore}>load more</MoreButtonLoad>
+          <MoreButtonLoad onClick={loadMore}>
+            {loading ? <Loader/> : null}
+            <MoreButtonLoadText>load more</MoreButtonLoadText>
+          </MoreButtonLoad>
         </More>
       </>
   )
