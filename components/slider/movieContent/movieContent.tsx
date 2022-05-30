@@ -2,7 +2,7 @@ import React from "react";
 import {FaPlay} from "react-icons/fa";
 import Link from "next/link";
 
-import {createItem} from '../../../../yandex-music-clone-slider/pages/slider'
+import {createItem} from '../../../pages/slider'
 import {MovieContentType} from "../types";
 
 import {SliderImgContainer, SliderDescription, SliderTitle, SliderText, SliderButton, SliderImg} from './movieContentStyles'

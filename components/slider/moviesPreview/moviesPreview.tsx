@@ -1,6 +1,6 @@
 import React from "react";
 
-import {createItem} from '../../../../yandex-music-clone-slider/pages/slider'
+import {createItem} from '../../../pages/slider'
 import {MoviesPreviewType} from "../types";
 
 import {PreviewSlideItem, PreviewImg, PreviewInfo, PreviewTitle, PreviewDuration, PreviewButton} from './moviePreview'
