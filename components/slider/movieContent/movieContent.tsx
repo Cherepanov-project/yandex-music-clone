@@ -2,7 +2,7 @@ import React from "react";
 import {FaPlay} from "react-icons/fa";
 import Link from "next/link";
 
-import {createItem} from '../../../pages/slider'
+import {createItem} from '../../../pages/slider1'
 import {MovieContentType} from "../types";
 
 import {SliderImgContainer, SliderDescription, SliderTitle, SliderText, SliderButton, SliderImg} from './movieContentStyles'
