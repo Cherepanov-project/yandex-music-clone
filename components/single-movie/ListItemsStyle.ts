@@ -46,7 +46,7 @@ export const MoreButton = styled.button`
   right: 0;
   font-size: 18px;
   padding-top: 1.5%;
-  padding-left: 3%;
+  padding-left: 1%;
   border: none;
   border-radius: 50%;
   background-color: #e50916;

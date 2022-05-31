@@ -26,7 +26,9 @@ const SingleMovie = () => {
 
   useEffect(() => {
     setMovieCount(movieCount)
-    setLoading(false)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
   }, [movieCount])
 
   return (
@@ -102,8 +104,7 @@ const SingleMovie = () => {
           <MoreTitle>More Like This</MoreTitle>
           <MoreContainer><ListItems movieCount={movieCount}/></MoreContainer>
           <MoreButtonLoad onClick={() => setMovieCount(movieCount + 4)}>
-            {loading ? <Loader type={'type'} color={'color'} /> : null}
-            <MoreButtonLoadText>load more</MoreButtonLoadText>
+            {loading ? <Loader type={'type'} color={'color'} /> : <MoreButtonLoadText>load more</MoreButtonLoadText>}
           </MoreButtonLoad>
         </More>
       </>

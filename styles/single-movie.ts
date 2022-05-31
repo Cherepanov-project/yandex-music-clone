@@ -140,11 +140,12 @@ export const MoreContainer = styled.div`
   flex-wrap: wrap;
   gap: 2vw;
   width: 100%;
+  margin-top: 32px;
 `
 
 export const MoreButtonLoad = styled.button`
   text-transform: uppercase;
-  width: auto;
+  width: 150px;
   height: 50px;
   background: #e50916;
   color: #fff;
@@ -156,7 +157,7 @@ export const MoreButtonLoad = styled.button`
   cursor: pointer;
   margin-top: 32px;
   display: flex;
-  gap: 16px;
+  justify-content: center;
 `
 
 export const MoreButtonLoadText = styled.span`
